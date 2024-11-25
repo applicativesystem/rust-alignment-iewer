@@ -67,15 +67,21 @@ fn alignment_embedded(path: &str) {
   for i in 0..finalholdseq_multivector.len()-1{
     for j in 0..finalholdseq_multivector[0].len(){
        if finalholdseq_multivector[i][j] == finalholdseq_multivector[i][j]{
-      println!("{}\t{}", finalholdseq_multivector[i][j].to_string().color(blue), finalholdseq_multivector[i+1][j].to_string().color(blue))
+      println!("{}\t{}", finalholdseq_multivector[i][j].to_string().blue().bold(),
+                                      finalholdseq_multivector[i+1][j].to_string().blue().bold())
     }
-      if finalholdseq_multivector[i][j] != finalholdseq_multivector[i+1][j]{
-        println!("{}\t{}", finalholdseq_multivector[i][j].to_string().color(blue), finalholdseq_multivector[i+1][j].to_string().color(red))
+      if finalholdseq_multivector[i][j] !=
+        finalholdseq_multivector[i+1][j]{
+        println!("{}\t{}", finalholdseq_multivector[i][j].to_string().blue().bold(),
+                     finalholdseq_multivector[i+1][j].to_string().red().bold())
     }
-      if finalholdseq_multivector[i][j] == "-" && finalholdseq_multivector[i+1][j] == "-" || finalholdseq_multivector[i][j] == "-" && finalholdseq_multivector[i+1][j] == "-" || finalholdseq_multivector[i][j] == "-" && finalholdseq_multivector[i+1][j] == "-" || finalholdseq_multivector[i][j] == "-" && finalholdseq_multivector[i+1][j] == "-" ||
+      if finalholdseq_multivector[i][j].to_string() == "-" && finalholdseq_multivector[i+1][j].to_string() == "A"
+        || finalholdseq_multivector[i][j].to_string() == "-" && finalholdseq_multivector[i+1][j].to_string() == "T" ||
+        finalholdseq_multivector[i][j].to_string() == "-" && finalholdseq_multivector[i+1][j].to_string() == "G" ||
+        finalholdseq_multivector[i][j].to_string() == "-" && finalholdseq_multivector[i+1][j].to_string() == "C" || {
+        println!("{}\t{}", finalholdseq_multivector[i][j].to_string().blue().bold(), finalholdseq_multivector[i+1][j].to_string().red().bold())
+      }
 
-
-
-  }
+    }
   }
 }
