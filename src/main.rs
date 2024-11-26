@@ -115,7 +115,8 @@ fn alignment_embedded_mismatch(path: &str) {
   for i in 0..finalholdseq_multivector.len()-1{
     for j in 0..finalholdseq_multivector[0].len(){
       if finalholdseq_multivector[i][j] != 
-          finalholdseq_multivector[i+1][j] {
+          finalholdseq_multivector[i+1][j] && finalholdseq_multivector[i][j].to_string() != "-" 
+              && finalholdseq_multivector[i+1][j].to_string() != "-" {
            println!("{}\t{}{}", j, finalholdseq_multivector[i][j].to_string().blue().bold(), 
                                    finalholdseq_multivector[i+1][j].to_string().red().bold())
     } else {
@@ -171,7 +172,15 @@ fn alignment_embedded_gapped(path: &str) {
        finalholdseq_multivector[i][j].to_string() == "-" 
        && finalholdseq_multivector[i+1][j].to_string() == "G" ||
        finalholdseq_multivector[i][j].to_string() == "-" 
-       && finalholdseq_multivector[i+1][j].to_string() == "C" {
+       && finalholdseq_multivector[i+1][j].to_string() == "C" ||
+       finalholdseq_multivector[i][j].to_string() == "A" 
+       && finalholdseq_multivector[i+1][j].to_string() == "-" ||
+       finalholdseq_multivector[i][j].to_string() == "T" 
+       && finalholdseq_multivector[i+1][j].to_string() == "-" ||
+       finalholdseq_multivector[i][j].to_string() == "G" 
+       && finalholdseq_multivector[i+1][j].to_string() == "-" ||
+       finalholdseq_multivector[i][j].to_string() == "C" 
+       && finalholdseq_multivector[i+1][j].to_string() == "-" {
        println!("{}\t{}{}", j, finalholdseq_multivector[i][j].to_string().white().bold(), 
        finalholdseq_multivector[i+1][j].to_string().red().bold())
     } else {

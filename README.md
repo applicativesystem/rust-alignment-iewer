@@ -12,6 +12,18 @@
 cargo build
 
 ```
+```
+λ gauravsablok rust-view-aln → λ git master* → ./target/debug/rust-view-aln -h
+Usage: rust-view-aln <ALIGNMENT_ARG>
+
+Arguments:
+  <ALIGNMENT_ARG>  please provide the reads R1 file path
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+
+```
 
 ```
 ./target/debug/rust-view-aln ./sample-files/samplealignment.fasta
