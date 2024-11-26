@@ -8,5 +8,12 @@
 
 ```
 cargo build
+
 ```
+
+```
+./target/debug/rust-view-aln ./sample-files/samplealignment.fasta
+
+```
+
 Gaurav Sablok
