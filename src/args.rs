@@ -4,6 +4,6 @@ use clap::Parser;
 #[clap(version)]
 
 pub struct AlignmentArgs {
-    /// please provide the reads R1 file path
+    /// please provide the path to the alignment file
     pub alignment_arg: String,
 }

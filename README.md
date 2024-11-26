@@ -17,7 +17,7 @@ cargo build
 Usage: rust-view-aln <ALIGNMENT_ARG>
 
 Arguments:
-  <ALIGNMENT_ARG>  please provide the reads R1 file path
+  <ALIGNMENT_ARG>  please provide the path to the alignment file
 
 Options:
   -h, --help     Print help
