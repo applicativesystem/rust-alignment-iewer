@@ -1,4 +1,4 @@
-# rust-view-aln
+# rust-alignment-viewer
 
 - a embedded colour coded rust visualization approach for the multiple sequence alignment. 
 - upgraded this crate to the complete version so that it now allows from the shorter alignments to large scale alignments in one crate. 
