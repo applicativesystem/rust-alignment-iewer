@@ -1,23 +1,23 @@
 # rust-view-aln
 
-- a embedded rust visualization approach for the genomic alignments and colour coded approach.
-- this crate is for shorter alignments such as organelle or bacterial genome alignments.
-- For longer alignments, see the other repository long read alignment, which uses a last significant bit with embedded approach to visualize them. 
-- rust embedded application for visualization. 
+- a embedded colour coded rust visualization approach for the multiple sequence alignment. 
+- upgraded this crate to the complete version so that it now allows from the shorter alignments to large scale alignments in one crate. 
 - general note: incase of golang and RUST, please see the last commit message and if the message says final and binary released, means code completed else in development phase. 
 
-![](https://github.com/applicativesystem/rust-view-aln/blob/master/embedded_alignment_visualization.png)
+![](https://github.com/applicativesystem/rust-view-aln/blob/master/alignment_spliced_alignment.png)
 
 ```
 cargo build
 
 ```
 ```
-λ gauravsablok rust-view-aln → λ git master* → ./target/debug/rust-view-aln -h
-Usage: rust-view-aln <ALIGNMENT_ARG>
+λ gauravsablok rust-alignment-viewer → λ git master* → ./rust-alignment-viewer -h
+Usage: rust-alignment-viewer <ALIGNMENT_ARG> [START_ALIGNMENT] [END_ALIGNMENT]
 
 Arguments:
-  <ALIGNMENT_ARG>  please provide the path to the alignment file
+  <ALIGNMENT_ARG>    please provide the path to the alignment file
+  [START_ALIGNMENT]  pleasr provide the start of the clipped alignment
+  [END_ALIGNMENT]    please provide the end of the clipped alignment
 
 Options:
   -h, --help     Print help
@@ -26,7 +26,7 @@ Options:
 ```
 
 ```
-./target/debug/rust-view-aln ./sample-files/samplealignment.fasta
+  ./target/debug/rust-alignment-viewer ./sample-files/sample.fasta 2 18
 
 ```
 
